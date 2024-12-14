@@ -45,7 +45,7 @@ services:
     environment:
       TZ: 'Asia/Shanghai'
     ports:
-      - 8000:80
+      - 8321:80
     depends_on:
       - backend
     networks:
