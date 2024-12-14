@@ -86,7 +86,11 @@ ip6tables -t nat -A POSTROUTING -s fd00:ea23:9c80:4a54:e242:5f97::/96 -j MASQUER
 ```shell
 bash <(curl -fsSL https://raw.githubusercontent.com/Aurora-Admin-Panel/deploy/main/install.sh)
 ```
-
+# MY仓库镜像
+- 一键脚本
+  ```shell
+  bash <(curl -fsSL https://raw.githubusercontent.com/dogwalkerg/jiguang-panel-deploy/refs/heads/master/jg.sh)
+  ```
 **由于公开的 github 代理以及 docker 代理不稳定，一键脚本已经移除所有代理选项，如需在国内机器安装，请自行解决相关网络问题**。一键脚本也支持更新测试版本，只需要添加 `--dev` 参数执行脚本即可，但是测试版本并不稳定，可能会出现各种问题，不建议在生产环境中使用。
 
 ## 手动安装 — 中转被控机
