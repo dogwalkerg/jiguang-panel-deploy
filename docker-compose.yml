@@ -45,7 +45,7 @@ services:
     environment:
       TZ: 'Asia/Shanghai'
     ports:
-      - 8000:80
+      - 8321:80
     depends_on:
       - backend
     networks:
@@ -64,8 +64,8 @@ services:
     restart: always
     environment:
       TZ: 'Asia/Shanghai'
-      POSTGRES_USER: aurora
-      POSTGRES_PASSWORD: AuroraAdminPanel321
+      POSTGRES_USER: golo123
+      POSTGRES_PASSWORD: golo123
       POSTGRES_DB: aurora
     volumes:
       - db-data:/var/lib/postgresql/data
