@@ -41,7 +41,7 @@ DOCKER_COMPOSE_CMD='docker compose'
 DOCKER_COMPOSE_URL="https://${GITHUB_URL}/docker/compose/releases/download/v2.29.7/docker-compose-$(uname -s)-$(uname -m)"
 
 AURORA_DEF_IP=""
-AURORA_DEF_PORT=8000
+AURORA_DEF_PORT=8321
 AURORA_DEF_TRAFF_MIN=10
 AURORA_DEF_DDNS_MIN=2
 AURORA_IP6TABLES_MASQ_COMMENT='aurora-docker-ipv6-support'
