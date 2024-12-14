@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   worker:
-    image: dogwalkerg/jiguang-admin-backend
+    image: dogwalkerg/jiguang-admin-backend:v0.18.9
     restart: always
     command: bash worker.sh
     environment:
@@ -22,7 +22,7 @@ services:
       - worker
 
   backend:
-    image: dogwalkerg/jiguang-admin-backend
+    image: dogwalkerg/jiguang-admin-backend:v0.18.9
     restart: always
     command: bash -c "while !</dev/tcp/postgres/5432; do sleep 1; done; alembic upgrade heads && python app/main.py"
     environment:
