@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   worker:
-    image: leishi1313/aurora-admin-backend:latest
+    image: dogwalkerg/aurora-admin-chunian-frontend:0.18.9
     restart: always
     command: bash worker.sh
     environment:
@@ -40,7 +40,7 @@ services:
       - aurora
 
   nginx:
-    image: leishi1313/aurora-admin-frontend:latest
+    image: dogwalkerg/aurora-admin-chunian-frontend:0.18.9
     restart: always
     environment:
       TZ: 'Asia/Shanghai'
