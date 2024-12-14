@@ -409,7 +409,7 @@ function welcome_aurora() {
     check_system
     check_docker_compose
     echo -e "${Green_font_prefix}
-            极光面板 一键脚本
+            初恋印象 一键脚本
     --------------------------------
     1.  安装 极光面板 ${FASTGIT} ${AURORA_VERSION}
     2.  更新 极光面板 ${FASTGIT} ${AURORA_VERSION}
