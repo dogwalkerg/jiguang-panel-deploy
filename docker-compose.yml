@@ -1,14 +1,14 @@
 version: '3.7'
 services:
   worker:
-    image: dogwalkerg/jiguang-admin-backend:v0.18.9
+    image: dogwalkerg/aurora-admin-frontend:latest
     restart: always
     command: bash worker.sh
     environment:
       TZ: 'Asia/Shanghai'
       ENABLE_SENTRY: 'yes'
-      DATABASE_URL: 'postgresql://aurora:AuroraAdminPanel321@postgres:5432/aurora'
-      ASYNC_DATABASE_URL: 'postgresql+asyncpg://aurora:AuroraAdminPanel321@postgres:5432/aurora'
+      DATABASE_URL: 'postgresql://aurora:AuroraAdminPane3222@postgres:5432/aurora'
+      ASYNC_DATABASE_URL: 'postgresql+asyncpg://aurora:AuroraAdminPane3222@postgres:5432/aurora'
       TRAFFIC_INTERVAL_SECONDS: 600
       DDNS_INTERVAL_SECONDS: 120
     volumes:
@@ -22,7 +22,7 @@ services:
       - worker
 
   backend:
-    image: dogwalkerg/jiguang-admin-backend:v0.18.9
+    image: dogwalkerg/aurora-admin-frontend:latest
     restart: always
     command: bash -c "while !</dev/tcp/postgres/5432; do sleep 1; done; alembic upgrade heads && python app/main.py"
     environment:
@@ -30,7 +30,7 @@ services:
       PYTHONPATH: .
       DATABASE_URL: 'postgresql://aurora:AuroraAdminPanel321@postgres:5432/aurora'
       ASYNC_DATABASE_URL: 'postgresql+asyncpg://aurora:AuroraAdminPanel321@postgres:5432/aurora'
-      SECREY_KEY: 'AuroraAdminPanel321'
+      SECREY_KEY: 'AuroraAdminPane3222'
     volumes:
       - app-data:/app/ansible/priv_data_dirs
     depends_on:
@@ -64,8 +64,8 @@ services:
     restart: always
     environment:
       TZ: 'Asia/Shanghai'
-      POSTGRES_USER: golo123
-      POSTGRES_PASSWORD: golo123
+      POSTGRES_USER: aurora
+      POSTGRES_PASSWORD: AuroraAdminPane3222
       POSTGRES_DB: aurora
     volumes:
       - db-data:/var/lib/postgresql/data
