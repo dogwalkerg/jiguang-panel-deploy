@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   worker:
-    image: dogwalkerg/aurora-admin-chunian-frontend:0.18.9
+    image: dogwalkerg/aurora-admin-chunian-backend:0.18.9
     restart: always
     command: bash worker.sh
     environment:
